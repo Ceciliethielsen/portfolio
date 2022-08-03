@@ -1,0 +1,134 @@
+body{
+    margin: 5rem;
+    background-color: #ffff;
+    font-family: 'Quicksand', sans-serif;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 200;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #936f6b;
+}
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+    height: 5.5rem;
+    width: 12rem;
+    margin-top: -1rem;
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;  
+    
+}
+.nav-link{
+    padding-left: 1rem;
+    text-decoration: none;
+    color: #936f6b;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.main-container{
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    padding-top: 6rem;
+
+}
+.overskrift{
+    flex-direction: column;
+    margin-top: 3rem;
+    
+}
+@media (max-width: 768px){
+    #burgermenu {
+        cursor: pointer;
+        height: 27px;
+        width: 27px;
+        margin: 2rem;
+        overflow: visible;
+        position: relative;
+        z-index:2;
+    }
+
+    #burgermenu span,
+    #burgermenu span:before,
+    #burgermenu span:after {
+        background: #936f6b;
+        display: block;
+        height: 2px;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+    }
+    #burgermenu span:before,
+    #burgermenu span:after {
+        content: "";
+    }
+    #burgermenu span {
+        right: 0px;
+        top: 13px;
+        width: 27px;
+    }
+    #burgermenu span:before {
+        left: 0px;
+        top: -10px;
+        width: 27px;
+    }
+    #burgermenu span:after {
+        left: 0px;
+        top: 10px;
+        width: 27px;
+    }
+
+    #burgermenu.close span {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 27px;
+    }
+    #burgermenu.close span:before {
+        top: 0px;
+        transform: rotate(90deg);
+        width: 27px;
+    }
+    #burgermenu.close span:after {
+        top: 0px;
+        left:0;
+        transform: rotate(90deg);
+        opacity:0;
+        width:0;
+    }
+    #navbar{
+        z-index:1;
+        min-width:100%;
+        min-height:100%;
+        position: fixed;
+        top:-15rem;
+        height:0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        padding-top:20px;
+        transition: all 0.3s ease-in-out;
+        flex-direction: column;
+    }
+    #navbar.overlay{
+        visibility: visible;
+        padding-top:100px;
+        background-color:#fff;
+        opacity: 80%;
+    }
+    #navbar a{
+        display:block;
+        font-size: 1.3rem;
+        text-decoration:none;
+        margin-right: 20px;
+    }
+}
