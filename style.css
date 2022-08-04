@@ -1,3 +1,4 @@
+/*Generelle styleelementer*/
 body{
     margin: 5rem;
     background-color: #ffff;
@@ -6,12 +7,16 @@ body{
 h1{
     font-size: 4rem;
     font-weight: 200;
+    margin: 0;
+    margin-top: 4rem;
 }
 h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #936f6b;
+    margin: 0;
 }
+/*header*/
 .header-container{
     display: flex;
     flex-direction: row;
@@ -21,6 +26,9 @@ h2{
     height: 5.5rem;
     width: 12rem;
     margin-top: -1rem;
+}
+#navbar{
+
 }
 .nav-list{
     display: flex;
@@ -36,6 +44,7 @@ h2{
     font-size: 1.3rem;
 }
 
+/*main*/
 .main-container{
     display: flex;
     flex: row;
@@ -45,10 +54,22 @@ h2{
 }
 .overskrift{
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 0rem;
     
 }
+.mig{
+    height: 40rem;
+}
+/*tablet-størrelse*/
 @media (max-width: 768px){
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .mig{
+    }
     #burgermenu {
         cursor: pointer;
         height: 27px;
@@ -110,25 +131,25 @@ h2{
         min-width:100%;
         min-height:100%;
         position: fixed;
-        top:-15rem;
-        height:0;
         visibility: hidden;
-        opacity: 0;
         text-align: center;
-        padding-top:20px;
         transition: all 0.3s ease-in-out;
         flex-direction: column;
     }
     #navbar.overlay{
         visibility: visible;
-        padding-top:100px;
         background-color:#fff;
         opacity: 80%;
+        margin-left: 0;
     }
-    #navbar a{
-        display:block;
-        font-size: 1.3rem;
+    .nav-list{
+        display: flex;
+        flex-direction: column;
         text-decoration:none;
-        margin-right: 20px;
+        margin: 0;
+    }
+    .nav-list a{
+        font-size: 2.5rem;
+        
     }
 }
