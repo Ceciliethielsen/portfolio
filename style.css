@@ -60,6 +60,9 @@ h2{
 .mig{
     height: 40rem;
 }
+.line{
+    background-color: #936f6b;
+}
 /*tablet-størrelse*/
 @media (max-width: 768px){
     h1{
