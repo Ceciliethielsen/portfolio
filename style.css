@@ -27,9 +27,6 @@ h2{
     width: 12rem;
     margin-top: -1rem;
 }
-#navbar{
-
-}
 .nav-list{
     display: flex;
     flex-direction: row;
@@ -43,28 +40,54 @@ h2{
     font-weight: 400;
     font-size: 1.3rem;
 }
+a:hover{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.nav-link-active{
+    text-decoration: underline;
+    color: #936f6b;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
 
 /*main*/
 .main-container{
     display: flex;
     flex: row;
     justify-content: space-around;
-    padding-top: 6rem;
 
 }
 .overskrift{
     flex-direction: column;
-    margin-top: 0rem;
+    padding-top: 5rem;
     
 }
 .mig{
-    height: 40rem;
+    height: 37rem;
+    padding-top: 1rem;
 }
 .line{
     background-color: #936f6b;
 }
+/*almindelig computerskærm-størrelse*/
+@media (max-width: 1024px){
+    h1{
+        font-size: 3.2rem;
+    }
+    h2{
+        font-size: 2.3rem;
+    }
+    .mig{
+        height: 31rem;
+    }
+}
 /*tablet-størrelse*/
 @media (max-width: 768px){
+    body{
+        margin: 3rem;
+    }
     h1{
         font-size: 3rem;
     }
@@ -72,6 +95,7 @@ h2{
         font-size: 2rem;
     }
     .mig{
+        height: 25rem;
     }
     #burgermenu {
         cursor: pointer;
@@ -137,22 +161,27 @@ h2{
         visibility: hidden;
         text-align: center;
         transition: all 0.3s ease-in-out;
-        flex-direction: column;
     }
     #navbar.overlay{
         visibility: visible;
         background-color:#fff;
-        opacity: 80%;
-        margin-left: 0;
+        opacity: 85%;
+        margin: -3rem;
     }
     .nav-list{
         display: flex;
         flex-direction: column;
-        text-decoration:none;
-        margin: 0;
+        padding-left: 0;
+        padding-top: 10rem;
     }
-    .nav-list a{
-        font-size: 2.5rem;
-        
+    .nav-item{
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .nav-link{
+        font-size: 2rem;
+    }
+    .nav-link-active{
+        font-size: 2rem;
     }
 }

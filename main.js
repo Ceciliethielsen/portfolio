@@ -9,3 +9,7 @@
     this.classList.toggle("close");
     overlay.classList.toggle("overlay");
   });
+
+  const sections =
+  document.getElementById("section[home-section]");
+  
