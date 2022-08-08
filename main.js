@@ -10,6 +10,6 @@
     overlay.classList.toggle("overlay");
   });
 
-  const sections =
-  document.getElementById("section[home-section]");
-  
+ function scrollToTop(){
+    window.scrollTo(0, 0);
+ }

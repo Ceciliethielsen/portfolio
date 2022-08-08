@@ -1,8 +1,11 @@
 /*Generelle styleelementer*/
+*{
+    scroll-behavior: smooth;
+}
 body{
-    margin: 5rem;
     background-color: #ffff;
     font-family: 'Quicksand', sans-serif;
+    margin: 0;
 }
 h1{
     font-size: 4rem;
@@ -20,12 +23,21 @@ h2{
 .header-container{
     display: flex;
     flex-direction: row;
+    background-color: white;
+    opacity: 90%;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 15px rgba(140, 120, 120, 0.2);
 }
 .logo{
-    height: 5.5rem;
-    width: 12rem;
-    margin-top: -1rem;
+    height: 7.4rem;
+    width: 6rem;
+    margin-left: 5rem;
+}
+#navbar{
+    margin-right: 5rem;
 }
 .nav-list{
     display: flex;
@@ -42,7 +54,6 @@ h2{
 }
 a:hover{
     font-weight: 600;
-    text-decoration: underline;
 }
 
 .nav-link-active{
@@ -53,24 +64,57 @@ a:hover{
 }
 
 /*main*/
-.main-container{
-    display: flex;
-    flex: row;
-    justify-content: space-around;
-
-}
-.overskrift{
-    flex-direction: column;
-    padding-top: 5rem;
-    
+section{
+    padding-top: 10rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 .mig{
     height: 37rem;
     padding-top: 1rem;
 }
-.line{
-    background-color: #936f6b;
+#about{
+    border-radius: 50%/100px 100px 0 0;
+    box-shadow: 0 3px 15px rgba(140, 120, 120, 0.2);
 }
+/*scroll to top-button
+#scroll-btn {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #ef476f;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font: bold 20px monospace;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  #scroll-btn.show {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+  }*/
+
+  .scrollTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: rgba(199, 154, 154, 0.905);
+    border-radius: 5px;
+    border-radius: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.5 ease 0s;
+    font-size: 5rem;
+    height: 5.2rem;
+    width: 5rem;
+  }
+  .scrollTop:hover{
+    box-shadow: 0 3px 15px rgba(176, 157, 157, 0.905);
+  }
 /*almindelig computerskærm-størrelse*/
 @media (max-width: 1024px){
     h1{
@@ -85,9 +129,6 @@ a:hover{
 }
 /*tablet-størrelse*/
 @media (max-width: 768px){
-    body{
-        margin: 3rem;
-    }
     h1{
         font-size: 3rem;
     }
@@ -99,8 +140,8 @@ a:hover{
     }
     #burgermenu {
         cursor: pointer;
-        height: 27px;
-        width: 27px;
+        height: 40px;
+        width: 40px;
         margin: 2rem;
         overflow: visible;
         position: relative;
@@ -123,28 +164,28 @@ a:hover{
     #burgermenu span {
         right: 0px;
         top: 13px;
-        width: 27px;
+        width: 40px;
     }
     #burgermenu span:before {
         left: 0px;
         top: -10px;
-        width: 27px;
+        width: 40px;
     }
     #burgermenu span:after {
         left: 0px;
         top: 10px;
-        width: 27px;
+        width: 40px;
     }
 
     #burgermenu.close span {
         transform: rotate(-45deg);
         top: 13px;
-        width: 27px;
+        width: 40px;
     }
     #burgermenu.close span:before {
         top: 0px;
         transform: rotate(90deg);
-        width: 27px;
+        width: 40px;
     }
     #burgermenu.close span:after {
         top: 0px;
@@ -157,6 +198,8 @@ a:hover{
         z-index:1;
         min-width:100%;
         min-height:100%;
+        top: 0;
+        left: 0;
         position: fixed;
         visibility: hidden;
         text-align: center;
@@ -165,18 +208,16 @@ a:hover{
     #navbar.overlay{
         visibility: visible;
         background-color:#fff;
-        opacity: 85%;
-        margin: -3rem;
+        opacity: 90%;
     }
     .nav-list{
         display: flex;
         flex-direction: column;
-        padding-left: 0;
-        padding-top: 10rem;
+        margin-top: 5rem;
     }
     .nav-item{
         justify-content: center;
-        padding-top: 2rem;
+        padding: 2rem;
     }
     .nav-link{
         font-size: 2rem;
