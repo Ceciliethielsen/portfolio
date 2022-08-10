@@ -1,121 +1,136 @@
-/*navigationsbar inkl. burgermenu*/
-#menu{
-    display: flex;
-    background-color: #fff;
-    justify-content: center;
+/*Generelle styleelementer*/
+*{
+    scroll-behavior: smooth;
 }
-  
-#menu a{
-    font-size: 1.5rem;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: black;
-    font-family: arial;
-}
-
-#menu a.active{
-    color: #009530;
-}
-  
-.dropdown{
-    overflow: hidden;
-}
-  
-.dropdown .btn1{
-    cursor: pointer; 
-    border: none;
-    outline: none;
-    padding: 14px 16px;
+body{
+    background-color: #ffff;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
-    font-size: 1.5rem;
-    background-color: inherit;
 }
-.btn1:active{
-    color: #009530;
-} 
-#menu a:hover, .dropdown:hover .btn1{
-    font-weight: 600;
-} 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    opacity: 80%;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+h1{
+    font-size: 4rem;
+    font-weight: 200;
+    margin: 0;
+    margin-top: 4rem;
 }
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
+h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #936f6b;
+    margin: 0;
+}
+/*header*/
+.header-container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    opacity: 90%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 15px rgba(140, 120, 120, 0.2);
+}
+.logo{
+    height: 7.4rem;
+    width: 6rem;
+    margin-left: 5rem;
+}
+#navbar{
+    margin-right: 5rem;
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;  
+    
+}
+.nav-link{
+    padding-left: 1rem;
     text-decoration: none;
-    display: block;
-    text-align: left;
+    color: #936f6b;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
-.dropdown-content a:hover {
-    background-color: #ddd;
+a:hover{
+    font-weight: 600;
 }
 
-.dropdown:hover .dropdown-content{
-    display: block;
+.nav-link-active{
+    text-decoration: underline;
+    color: #936f6b;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
-#roundbuttons{
-    padding-top: 0.5rem;
-    margin-left: 10rem;
+
+/*main*/
+section{
+    padding-top: 10rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
-  
-.search{
-    height: 3rem;
-    width: 3rem;
-    cursor: pointer;
+.mig{
+    height: 37rem;
+    padding-top: 1rem;
 }
-.profile{
-    height: 3rem;
-    width: 3rem;
-    padding-left: 0.5rem;
-    cursor: pointer;
+#about{
+    border-radius: 50%/100px 100px 0 0;
+    box-shadow: 0 3px 15px rgba(140, 120, 120, 0.2);
 }
-@media(max-width:1024px){
-    /*header med navbar*/
-    #menu a{
-        font-size: 1.2rem;
-    }
-    .dropdown .btn1{
-        font-size: 1.2rem;
-    }
-    #roundbuttons{
-        padding-top: 0rem;
-        margin-left: 2rem;
-    }
-}
-@media(max-width:768px){
-    /*generelle styleelementer*/
+/*scroll to top-button*/
+#topBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 2.5rem; /* Place the button at the bottom of the page */
+    right: 2.5rem; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: #d19b95; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 15%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: rgba(126, 102, 117, 0.233) 0px 4px 12px;
+    background-color: #fff;
+  }
+  .bx {
+    font-size: 3rem;
+  }
+  #topBtn:hover {
+    box-shadow: rgba(142, 82, 109, 0.25) 0px 13px 27px -5px, rgba(122, 77, 97, 0.3) 0px 8px 16px -8px;
+  }
+/*almindelig computerskærm-størrelse*/
+@media (max-width: 1024px){
     h1{
-        font-size: 1.7rem;
+        font-size: 3.2rem;
     }
     h2{
-        font-size: 1.5rem;
+        font-size: 2.3rem;
     }
-    h3{
-        font-size: 1.3rem;
+    .mig{
+        height: 31rem;
     }
-    /*header inklusiv burgermenu*/
-    .logo{
-        width: 15rem;
-        height: 7rem;
+}
+/*tablet-størrelse*/
+@media (max-width: 768px){
+    h1{
+        font-size: 3rem;
     }
-    #buttons{
-        display: none;
+    h2{
+        font-size: 2rem;
     }
-    .header{
-        display: flex;
-        justify-content: space-between;
+    .mig{
+        height: 25rem;
     }
     #burgermenu {
         cursor: pointer;
-        height: 27px;
-        width: 27px;
+        height: 40px;
+        width: 40px;
         margin: 2rem;
         overflow: visible;
         position: relative;
@@ -125,7 +140,7 @@
     #burgermenu span,
     #burgermenu span:before,
     #burgermenu span:after {
-        background: #009530;
+        background: #936f6b;
         display: block;
         height: 2px;
         position: absolute;
@@ -138,28 +153,28 @@
     #burgermenu span {
         right: 0px;
         top: 13px;
-        width: 27px;
+        width: 40px;
     }
     #burgermenu span:before {
         left: 0px;
         top: -10px;
-        width: 27px;
+        width: 40px;
     }
     #burgermenu span:after {
         left: 0px;
         top: 10px;
-        width: 27px;
+        width: 40px;
     }
 
     #burgermenu.close span {
         transform: rotate(-45deg);
         top: 13px;
-        width: 27px;
+        width: 40px;
     }
     #burgermenu.close span:before {
         top: 0px;
         transform: rotate(90deg);
-        width: 27px;
+        width: 40px;
     }
     #burgermenu.close span:after {
         top: 0px;
@@ -168,43 +183,35 @@
         opacity:0;
         width:0;
     }
-    #menu{
+    #navbar{
         z-index:1;
         min-width:100%;
         min-height:100%;
+        top: 0;
+        left: 0;
         position: fixed;
-        top:-15rem;
-        height:0;
         visibility: hidden;
-        opacity: 0;
         text-align: center;
-        padding-top:20px;
         transition: all 0.3s ease-in-out;
-        flex-direction: column;
     }
-    #menu.overlay{
+    #navbar.overlay{
         visibility: visible;
-        padding-top:100px;
         background-color:#fff;
-        opacity: 80%;
+        opacity: 90%;
     }
-    #menu a{
-        display:block;
-        font-size: 1.3rem;
-        text-decoration:none;
-        margin-right: 20px;
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
     }
-    .dropdown:hover .dropdown-content{
-        display: block;
+    .nav-item{
+        justify-content: center;
+        padding: 2rem;
     }
-    .dropdown{
-        padding-top: 3rem;
+    .nav-link{
+        font-size: 2rem;
     }
-    .dropdown-content{
-        margin-left: 235px;
-    }
-    #roundbuttons{
-        padding-top: 3rem;
-        margin-left: 0;
+    .nav-link-active{
+        font-size: 2rem;
     }
 }

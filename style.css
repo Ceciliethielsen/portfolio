@@ -79,41 +79,29 @@ section{
     border-radius: 50%/100px 100px 0 0;
     box-shadow: 0 3px 15px rgba(140, 120, 120, 0.2);
 }
-/*scroll to top-button
-#scroll-btn {
-    opacity: 0;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    background-color: #ef476f;
+/*scroll to top-button*/
+#topBtn {
+    display: none;
     position: fixed;
-    bottom: 10%;
-    right: 10%;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    font: bold 20px monospace;
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  #scroll-btn.show {
-    opacity: 1;
-    transition: opacity 1s, transform 1s;
-  }*/
-
-  .scrollTop{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    color: rgba(199, 154, 154, 0.905);
-    border-radius: 5px;
-    border-radius: 1px solid #fff;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: #d19b95;
     cursor: pointer;
-    transition: all 0.5 ease 0s;
-    font-size: 5rem;
-    height: 5.2rem;
-    width: 5rem;
+    border-radius: 15%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: rgba(126, 102, 117, 0.233) 0px 4px 12px;
+    background-color: #fff;
   }
-  .scrollTop:hover{
-    box-shadow: 0 3px 15px rgba(176, 157, 157, 0.905);
+  .bx {
+    font-size: 3rem;
+  }
+  #topBtn:hover {
+    box-shadow: rgba(142, 82, 109, 0.25) 0px 13px 27px -5px, rgba(122, 77, 97, 0.3) 0px 8px 16px -8px;
   }
 /*almindelig computerskærm-størrelse*/
 @media (max-width: 1024px){
