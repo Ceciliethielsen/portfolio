@@ -10,7 +10,7 @@
     <script src="main.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body onload="document.body.style.opacity='1'">
     <!--Til toppen-knap-->
     <button onclick="topFunction()" id="topBtn" title="Go to top"><i class='bx bx-chevron-up scrolltop__icon'></i></button>
     <header>
@@ -21,7 +21,7 @@
             </div>
             <nav id="navbar">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link-active">HJEM</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">HJEM</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">OM MIG</a></li>
                     <li class="nav-item"><a href="#education" class="nav-link">UDDANNELSE</a></li>
                     <li class="nav-item"><a href="#portfolio" class="nav-link">PORTFOLIO</a></li>
@@ -44,12 +44,13 @@
                             Mit navn er Cecilie. Jeg er 24 år gammel og bor på fyn.
                             Jeg er på tredje semester af multimediedesign-uddannelsen, hvor jeg har lært at udvikle brugerflader og arbejde i HTML, CSS og JS. 
                             <br>
-                            Jeg er pt igang med at forbedre mine færdigheder indenfor PHP. 
+                            Jeg er pt igang med at forbedre mine færdigheder indenfor PHP og Vue. 
+                            <br>
                             Jeg har en kæmpe stolthed i mit arbejde og elsker at udvikle mig indenfor mit fag.
                         </p>
                     </div>
                     <br>
-                    <a download href="cv" class="cv-button">HENT MIT CV HER</a>
+                    <a download href="doc/CV Cecilie Thielsen.pdf" class="cv-button">HENT MIT CV HER</a>
                 </div>
                 <img src="img/portrait1.png" alt="billede-af-mig" class="mig">
             </section>
@@ -57,10 +58,19 @@
                 <h1>Om mig</h1>
             </section>
             <section id="education">
-                <h1>Uddannele</h1>
+                <h1>Uddannelse</h1>
             </section>
             <section id="portfolio">
-                <h1>Portfolio</h1>
+                <h1>Portfolio</h1><br>
+                <div class="portfolio-content">
+                    <a href="https://www.youtube.com/watch?v=NXaHcMTCTVs&t=8s&ab_channel=OhNothing" target="blank">
+                        <img src="img/ohnothing-logo.png" class="ohnothing" alt="Billede fra Ohnothing-video">
+                    </a>
+                    <div class="portfolio-data">
+                        <span class="portfolio-text">Adobe Premiere Pro</span><br>
+                        <a href="https://www.youtube.com/watch?v=NXaHcMTCTVs&t=8s&ab_channel=OhNothing" target="blank" class="button button-link">Gå til link</a>
+                    </div>
+                </div>
             </section>
             <section id="contact">
                 <h1>Kontakt</h1>
@@ -68,7 +78,25 @@
         </div>
     </main>
     <footer>
-
+        <div class="footer-container">
+            <h2>ceciliethielsen.dk</h2>
+            <div class="socialmedia">
+                <ul class="socials">
+                    <a href="https://www.facebook.com/cecilie.thielsen">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cecilie-thielsen-b0747a220/">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://www.instagram.com/cillethielsen/">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2022, All Rights Reserved By Cecilie Thielsen</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

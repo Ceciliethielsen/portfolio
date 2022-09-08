@@ -10,7 +10,7 @@
     overlay.classList.toggle("overlay");
   });
   
-  //Get the button:
+  //Scroll til toppen-knap
   mybutton = document.getElementById("topBtn");
 
   // When the user scrolls down 20px from the top of the document, show the button
