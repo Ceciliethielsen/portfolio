@@ -75,9 +75,16 @@ section{
     height: 37rem;
     padding-top: 1rem;
 }
-#about{
-    border-radius: 50%/100px 100px 0 0;
-    box-shadow: 0 3px 15px rgba(140, 120, 120, 0.2);
+
+.cv-button{
+    color: #000;
+    text-decoration: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.cv-button:hover{
+    background-color:rgb(208, 242, 208);
 }
 /*scroll to top-button*/
 #topBtn {
